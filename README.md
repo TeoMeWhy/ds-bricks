@@ -13,7 +13,7 @@ Ao final, vamos integrar o modelo campeão ao nosso bot na Twitch!
 ## Sobre o curso
 
 ### Quando
-A partir do dia 29/07/2024 às 9AM iniciaremos um projeto de Data Science completamente do início. As lives são aberta à todo público, disponívei na [Twitch](https://twitch.tv/teomewhy) e [YouTube](https://youtube.com/@teomewhy).
+A partir do dia 29/07/2024 às 9AM iniciaremos um projeto de Data Science completamente do início. As lives são aberta à todo público, disponível na [Twitch](https://twitch.tv/teomewhy) e [YouTube](https://youtube.com/@teomewhy).
 
 ### Onde
 - [Twitch](https://twitch.tv/teomewhy)
