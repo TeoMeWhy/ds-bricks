@@ -15,7 +15,7 @@ Ao final, vamos integrar o modelo campeão ao nosso bot na Twitch!
 ### Quando
 A partir do dia 29/07/2024 às 9AM iniciaremos um projeto de Data Science completamente do início. As lives são aberta à todo público, disponível na [Twitch](https://twitch.tv/teomewhy) e [YouTube](https://youtube.com/@teomewhy).
 
-[Clique aqui para adiciona na sua agenda!](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MWluMzQ5ZGhyZ2RuM2NuNDR0cjEyb2IyYmNfMjAyNDA3MjlUMTIwMDAwWiB0ZW9AdGVvbWV3aHkub3Jn&tmsrc=teo%40teomewhy.org&scp=ALL)
+[Clique aqui para adicionar na sua agenda!](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MWluMzQ5ZGhyZ2RuM2NuNDR0cjEyb2IyYmNfMjAyNDA3MjlUMTIwMDAwWiB0ZW9AdGVvbWV3aHkub3Jn&tmsrc=teo%40teomewhy.org&scp=ALL)
 
 ### Onde
 - [Twitch](https://twitch.tv/teomewhy)
