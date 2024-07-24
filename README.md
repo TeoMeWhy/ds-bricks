@@ -15,6 +15,8 @@ Ao final, vamos integrar o modelo campeão ao nosso bot na Twitch!
 ### Quando
 A partir do dia 29/07/2024 às 9AM iniciaremos um projeto de Data Science completamente do início. As lives são aberta à todo público, disponível na [Twitch](https://twitch.tv/teomewhy) e [YouTube](https://youtube.com/@teomewhy).
 
+[Clique aqui para adiciona na sua agenda!](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MWluMzQ5ZGhyZ2RuM2NuNDR0cjEyb2IyYmNfMjAyNDA3MjlUMTIwMDAwWiB0ZW9AdGVvbWV3aHkub3Jn&tmsrc=teo%40teomewhy.org&scp=ALL)
+
 ### Onde
 - [Twitch](https://twitch.tv/teomewhy)
 - [YouTube](https://youtube.com/@teomewhy)
@@ -34,6 +36,14 @@ As principais tabelas que trabalharemso serão:
 - `silver.upsell.produto`
 
 Quer se antecipar? Conheça mais sobre os dados [aqui](https://www.kaggle.com/datasets/teocalvo/teomewhy-loyalty-system).
+
+### Requisitos
+
+- Python
+- SQL
+- -Git/GitHub
+
+Confira tudo isso e muito mais em nosso site. [teomewhy.org/courses](https://teomewhy.org/courses)
 
 ## Sobre o instrutor
 Téo é um entusiasta do universo de dados, traz consigo uma rica jornada nas esferas de Data Science e Analytics. Como líder, destacou-se na condução estratégica de equipes, liderando pessoas e projetos de Advanced Analytics. Sua visão inovadora, não apenas transformou a cultura organizacional, mas também impulsionou a implementação de diversos projetos de dados, integrando de maneira eficiente áreas cruciais da empresa.
