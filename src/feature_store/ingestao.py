@@ -19,15 +19,19 @@ def import_query(path):
 
 def table_exists(catalog, database, table):
     count = (spark.sql(f"SHOW TABLES FROM {catalog}.{database}")
-                .filter(f"tableName='{table}'")
-                .count())
+                  .filter(f"tableName='{table}'")
+                  .count())
 
     return count > 0
 
 # COMMAND ----------
 
-    
-query = import_query("fs_geral.sql")
+catalog = "feature_store"
+database = "upsell"
+table = "fs_geral"
+tablename = f"{catalog}.{database}.{table}"
+
+query = import_query(f"{table}.sql")
 
 dates = ['2024-02-01',
          '2024-03-01',
@@ -36,13 +40,13 @@ dates = ['2024-02-01',
          '2024-06-01',
          '2024-07-01']
 
-if not table_exists("feature_store", "upsell", "fs_geral"):
+if not table_exists(catalog, database, table):
 
     print("Criando tabela...")
 
     df = spark.sql(query.format(dt_ref=dates.pop(0)))
     fe.create_table(
-        name="feature_store.upsell.fs_geral",
+        name=tablename,
         primary_keys=['dtRef', 'idCliente'],
         df=df,
         partition_columns=['dtRef'],
@@ -51,6 +55,8 @@ if not table_exists("feature_store", "upsell", "fs_geral"):
 
 for d in tqdm(dates):
     df = spark.sql(query.format(dt_ref=d))
-    fe.write_table(name="feature_store.upsell.fs_geral",
-                   df=df,
-                   mode="merge")
+    fe.write_table(
+        name=tablename,
+        df=df,
+        mode="merge"
+    )
