@@ -28,7 +28,7 @@ def table_exists(catalog, database, table):
 
 catalog = "feature_store"
 database = "upsell"
-table = "fs_transacoes"
+table = "fs_pontos"
 tablename = f"{catalog}.{database}.{table}"
 
 query = import_query(f"{table}.sql")
