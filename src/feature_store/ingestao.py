@@ -28,7 +28,7 @@ def table_exists(catalog, database, table):
 
 catalog = "feature_store"
 database = "upsell"
-table = "fs_geral"
+table = "fs_transacoes"
 tablename = f"{catalog}.{database}.{table}"
 
 query = import_query(f"{table}.sql")
@@ -60,3 +60,7 @@ for d in tqdm(dates):
         df=df,
         mode="merge"
     )
+
+# COMMAND ----------
+
+
