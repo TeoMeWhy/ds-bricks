@@ -18,7 +18,7 @@ tb_ds (
     SELECT idCliente,
           sum(CASE WHEN dtTransacao > '{dt_ref}' - INTERVAL 7 DAY THEN nrPontosTransacao END) AS nrQtdePontosD7,
           sum(CASE WHEN dtTransacao > '{dt_ref}' - INTERVAL 7 DAY AND nrPontosTransacao > 0 THEN nrPontosTransacao END) AS nrQtdePontosPosD7,
-          sum(CASE WHEN dtTransacao > '{dt_ref}' - INTERVAL 28 DAY AND nrPontosTransacao < 0 THEN ABS(nrPontosTransacao) END) AS nrQtdePontosNegD7,
+          sum(CASE WHEN dtTransacao > '{dt_ref}' - INTERVAL 7 DAY AND nrPontosTransacao < 0 THEN ABS(nrPontosTransacao) END) AS nrQtdePontosNegD7,
           
           sum(CASE WHEN dtTransacao > '{dt_ref}' - INTERVAL 28 DAY THEN nrPontosTransacao END) AS nrQtdePontosD28,
           sum(CASE WHEN dtTransacao > '{dt_ref}' - INTERVAL 28 DAY AND nrPontosTransacao > 0 THEN nrPontosTransacao END) AS nrQtdePontosPosD28,
