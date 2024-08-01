@@ -60,7 +60,3 @@ for d in tqdm(dates):
         df=df,
         mode="merge"
     )
-
-# COMMAND ----------
-
-
