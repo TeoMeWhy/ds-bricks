@@ -1,13 +1,6 @@
 # Databricks notebook source
-# MAGIC %pip install databricks-feature-engineering
-
-# COMMAND ----------
-
-dbutils.library.restartPython()
-
-# COMMAND ----------
-
 from databricks.feature_engineering import FeatureEngineeringClient
+
 import datetime
 from tqdm import tqdm
 
@@ -23,6 +16,7 @@ def table_exists(catalog, database, table):
                   .filter(f"tableName='{table}'")
                   .count())
     return count > 0
+
 
 def range_date(start, stop):
     dt_start = datetime.datetime.strptime(start, '%Y-%m-%d')
