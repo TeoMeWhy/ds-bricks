@@ -8,6 +8,7 @@ dbutils.library.restartPython()
 # COMMAND ----------
 
 from databricks.feature_engineering import FeatureEngineeringClient
+import datetime
 from tqdm import tqdm
 
 fe = FeatureEngineeringClient()
@@ -21,25 +22,30 @@ def table_exists(catalog, database, table):
     count = (spark.sql(f"SHOW TABLES FROM {catalog}.{database}")
                   .filter(f"tableName='{table}'")
                   .count())
-
     return count > 0
+
+def range_date(start, stop):
+    dt_start = datetime.datetime.strptime(start, '%Y-%m-%d')
+    dt_stop = datetime.datetime.strptime(stop, '%Y-%m-%d')
+    dates = []
+    while dt_start <= dt_stop:
+        dates.append(dt_start.strftime('%Y-%m-%d'))
+        dt_start += datetime.timedelta(days=1)
+    return dates
 
 # COMMAND ----------
 
 catalog = "feature_store"
 database = "upsell"
-table = "fs_dia_horario"
+table = dbutils.widgets.get("table")
+start = dbutils.widgets.get("dt_start")
+stop = dbutils.widgets.get("dt_stop")
+
+dates = range_date(start, stop)
+
 tablename = f"{catalog}.{database}.{table}"
 
 query = import_query(f"{table}.sql")
-
-dates = ['2024-02-01',
-         '2024-03-01',
-         '2024-04-01',
-         '2024-05-01',
-         '2024-06-01',
-         '2024-07-01',
-         '2024-08-01',]
 
 if not table_exists(catalog, database, table):
 
