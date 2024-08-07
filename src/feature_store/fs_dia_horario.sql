@@ -21,8 +21,8 @@ WITH tb_transacao AS (
   LEFT JOIN silver.upsell.transacao_produto AS t2
   ON t1.idTransacao = t2.idTransacao
 
-  WHERE t1.dtTransacao < '{dt_ref}'
-  AND t1.dtTransacao >= '{dt_ref}' - INTERVAL 28 DAY  
+  WHERE dtTransacao - INTERVAL 3 HOUR < '{dt_ref}'
+  AND dtTransacao - INTERVAL 3 HOUR >= '{dt_ref}' - INTERVAL 28 DAY
 ),
 
 tb_periodo AS (
