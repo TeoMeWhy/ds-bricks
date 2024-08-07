@@ -32,7 +32,6 @@ tb_churn AS (
     ORDER BY t1.idCliente, t1.dtref
 )
 
-
 SELECT *
 FROM tb_churn
 QUALIFY row_number() OVER (PARTITION BY idCliente ORDER BY rand()) <= 2
